@@ -1,0 +1,21 @@
+
+1) Start the ZooKeeper service
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+2) Start the Kafka broker service
+
+
+
+http://localhost:8080/api/v1/kafka/h2/getAllMessages
+
+chengdongzhang@Chengdongs-MacBook-Pro user/local/mysql/bin % ./mysql -u root -p  
+
+password: mysqlroot1!
+
+http://localhost:8080/actuator/health
+
+{
+    "id":123,
+    "firstName": "Chengdong",
+    "lastName": "Zhang"
+}

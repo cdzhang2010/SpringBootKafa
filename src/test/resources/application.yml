@@ -1,0 +1,30 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer   
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    consumer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer   
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+       spring:
+        json:
+          trusted:
+            packages:*
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
